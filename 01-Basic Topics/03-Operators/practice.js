@@ -35,3 +35,21 @@ console.log(booleanSpacer);
  33 => "33"
  */
 
+
+
+ console.log("2"> 1); // true
+ console.log("02">1); //true
+
+ console.log(null > 0); //false
+ console.log(null == 0); //false
+ console.log(null >= 0); // true
+
+ 
+ console.log(undefined == 0); //false
+ console.log(undefined >0); //false
+ console.log(undefined<0); //false
+
+ /*
+The reason is the an equality check == and comparizons ><>= work differently.
+comparisons convert null to a number, treating it as 0. that's why (3) null >= 0 is true and null >0 is false.
+ */
