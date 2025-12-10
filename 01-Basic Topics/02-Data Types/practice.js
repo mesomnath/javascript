@@ -39,3 +39,34 @@ let myObj = {
 const myFunction = function(){
     console.log("hello world");
 }
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// stack memory(used in premitive data type), heap memory (non-premitive datatype)
+/*
+stack memory used to stored the values of premitive data types and it is copying the data so the values are not overriding each other
+
+heap memory used to reference the values of non-premitive data and it is referencing the values, so the values are overiding each other
+
+
+*/
+//stack memory
+let userName = "somnathsahu";
+let anotherUserName = userName;
+anotherUserName = "somnath";
+
+console.log(userName); //somnathsahu
+console.log(anotherUserName); //somnath
+
+//heap memory
+let userDetails={
+    email: "user@gmail.com",
+    location: "IN"
+}
+
+let anotherUserDetails = userDetails;
+anotherUserDetails.email = "newuser@gmail.com";
+
+console.log(userDetails.email); // "newuser@gmail.com"
+console.log(anotherUserDetails.email); //"newuser@gmail.com"
+
+
